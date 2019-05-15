@@ -1,0 +1,185 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>E Blogs</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+<style>
+.mySlides {display:none}
+body
+{
+    background: #ffdd99;
+}
+
+</style>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,800,700' rel='stylesheet' type='text/css'/>
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'/>
+<script src="js/jquery.min.js"></script>	
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>		
+   	
+</head>
+
+    <body>
+<!-- header -->
+        
+	<div class="banner">
+  	    <div class="container">
+			<div class="logo">
+				&nbsp;<img src="images/coollogo_com-324191047.png" style="width:600px;height:300px" /></div>
+		</div> 
+			<div class="header-bottom">
+				<div class="container">
+					<div class="head-nav">
+						<span class="menu"> </span>
+							<ul>
+								<li class="active"><a href="Default.aspx">Home</a></li>
+								<li><a href="Home.aspx">Read</a></li>
+								<%--<li><a href="login1.aspx">Login</a></li>--%>
+                                <li><a href="<%= h1 %>"><%= t1 %></a></li>
+<li><a href="<%= h2 %>"><%= t2 %></a></li>
+                                
+								<div class="clearfix"> </div>
+						</ul>
+				</div>
+
+                   
+
+                   
+				<!-- script-for-nav -->
+					<script>
+					    $("span.menu").click(function () {
+					        $(".head-nav ul").slideToggle(300, function () {
+					            
+					        });
+					    });
+					</script>
+				<!-- script-for-nav -->		
+						<div class="clearfix"> </div>
+				</div>
+			</div>
+	</div>
+<!-- header -->
+<!-- content -->
+
+        
+<div class="w3-container">
+  <h2 style="align-content:center;text-align:center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size:xx-large"> Categories</h2>
+  <p></p>
+</div>
+        <div class="w3-content" style="width:100%">
+  <img  class="mySlides" src="images/breakfast.jpg" style="width:100%"/>
+  <img  class="mySlides" src="images/travel.jpg" style="width:100%"/>
+  
+</div>
+        <div class="w3-center">
+  <div class="w3-section">
+    <button class="w3-button w3-light-grey" onclick="plusDivs(-1)"> ❮ Prev</button>
+    
+   
+    <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯ </button>
+  </div>
+ 
+  <button class="w3-button demo" onclick="currentDiv(4)">Food</button>
+  <button class="w3-button demo" onclick="window.open('travelling.aspx')">Travelling</button>
+
+</div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-red", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-red";
+    }
+</script>
+        
+
+	<div class="container">
+		<div class="content" style="background:#ffdd99">
+			<div>
+			   <div class="container">
+		
+
+            <div   style=" margin-right: 0px;  margin-top:auto ;height:96px; width:100%;">
+			    <img src="images/FISHING RODS.jpg" style="height:auto;width:100%;" /><br />
+               
+                </div>
+
+                   <br />
+                   <br />
+        <br />
+        
+        
+       
+        <div style="height: 96px; width: 100%; margin-right: auto; margin-top: 50px">
+                 <img src="images/ad.png" style="height:auto;width:100%;" /><br />
+               
+			   
+&nbsp;</div>
+            </div>
+
+
+
+
+
+<!-- content -->
+<!-- footer -->
+	<div class="footer" style="background:#ffdd99">
+		<div class="container">
+			<p> &nbsp;</p>
+            <p> &nbsp;</p>
+            <div class="footer">
+		<div class="container">
+			<p> &nbsp;</p>
+            <p> &nbsp;2017  ©
+                E Blogs
+		</p>
+		</div>
+	</div>
+				
+			</div>
+		</div>
+	</div>
+<!-- footer -->
+&nbsp;</div>
+            </div>
+        </div>
+	
+
+
+
+            
+</body>
+
+</html>
